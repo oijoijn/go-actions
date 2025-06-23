@@ -30,7 +30,3 @@ jobs:
     steps:
       - name: First step in root
         run: pwd
-
-      - name: Third step in test directory
-        working-directory: ./test
-        run: pwd
