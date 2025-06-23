@@ -22,3 +22,15 @@ jobs:
 
       - name: build and run
         run: go run main.go
+
+  ubuntu:
+    name: pwd-ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: First step in root
+        run: pwd
+
+      - name: Third step in test directory
+        working-directory: ./test
+        run: pwd
