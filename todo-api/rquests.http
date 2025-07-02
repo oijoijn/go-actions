@@ -1,0 +1,48 @@
+###
+# @name create_todo
+# 新しいTodoを作成する
+POST http://localhost:8080/api/v1/todos
+Content-Type: application/json
+
+{
+    "title": "クリーンアーキテクチャを学習する"
+}
+
+###
+# @name create_another_todo
+# 別のTodoを作成する
+POST http://localhost:8080/api/v1/todos
+Content-Type: application/json
+
+{
+    "title": "夕飯の買い出し"
+}
+
+###
+# @name get_all_todos
+# すべてのTodoを取得する
+GET http://localhost:8080/api/v1/todos
+
+###
+# @name get_todo_by_id
+# IDを指定してTodoを取得する
+# 上で作成したTodoのIDをここに貼り付けてください
+GET http://localhost:8080/api/v1/todos/2
+
+###
+# @name update_todo
+# IDを指定してTodoを更新する
+# 上で作成したTodoのIDをここに貼り付けてください
+PUT http://localhost:8080/api/v1/todos/2
+Content-Type: application/json
+
+{
+    "title": "クリーンアーキテクチャの学習を完了させる！",
+    "completed": true
+}
+
+###
+# @name delete_todo
+# IDを指定してTodoを削除する
+# 上で作成したTodoのIDをここに貼り付けてください
+DELETE http://localhost:8080/api/v1/todos/2
